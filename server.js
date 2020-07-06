@@ -109,7 +109,7 @@ routeData.get("/mainCategories",function(req,res){
     })
 });
 routeData.get("/states",function(req,res){
-    connection.query('SELECT * FROM `states_mt`',
+    connection.query('SELECT * FROM states_mt WHERE country_id="101"',
     
     (err,rows)=>{
         if(err) throw err ;
